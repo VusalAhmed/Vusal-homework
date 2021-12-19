@@ -1,35 +1,25 @@
-﻿using System;
+﻿ using System;
 
-namespace task_3
+namespace Extensions
 {
-    class Program
+  public  class Program
     {
-        static void Main(string[] args)
+        static public void  Main(string[] args)
         {
-            #region
-            int[] arr = { 123, 64, 256, 33, 843 };
-            int sum1 = 0;
-            int sum2 = 0;
-            for (int i = 0; i < arr.Length; i--)
-            {
-                if (i >= 100 || i <= 999)
-                {
-                    sum1 += (arr[i] % 10);
-                    arr[i] /= 10;
-                 
-                }
-                
-                else
-                {
-                    sum2 += (arr[i] % 10);
-                    arr[i] /= 10;
-                    sum1 = sum2 - arr[i];
-                }
-                Console.WriteLine(sum1 - sum2);
-            }
+            string str1 = "Hello world";
+            string str2 = "Hello world";
+            
+            
+            bool a, b;
+
+            a = str1.EndsWith("world");
+            Console.WriteLine(a.ToString());
+             
+            b = str2.EndsWith("Hello");
+            Console.WriteLine(b.ToString());
+           
+
+
         }
     }
 }
-
-
-#endregion
