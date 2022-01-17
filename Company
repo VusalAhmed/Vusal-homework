@@ -1,0 +1,32 @@
+CREATE DATABASE COMPANY
+USE COMPANY	
+
+CREATE TABLE Employees
+(
+Name nvarchar(20),
+Surname nvarchar(20),
+
+
+
+
+)
+ALTER TABLE Employees
+ADD Salary INT
+ALTER TABLE Employees 
+ADD Position nvarchar(20)
+
+ALTER TABLE Employees
+DROP COLUMN Age
+
+
+INSERT INTO Employees
+ VALUES('Vusal','Ahmadzada','Developer',800),
+  ('Malik','Qurbanli','Engineer',1000),
+('Ismayil','Qurbanli','Pilot',1200),
+('Sabir','Veliyev','Doctor',1400)
+
+
+SELECT AVG(Salary) [Ortalama Maas] From Employees
+SELECT * From Employees Where Salary > (SELECT AVG(Salary) From Employees)
+SELECT MIN(Salary) [Minumum Maas] From Employees
+SELECT MAX(Salary) [Maximum Maas] From Employees
